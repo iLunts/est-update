@@ -8,6 +8,7 @@ var sourcemaps = require('gulp-sourcemaps');
 var csso = require('gulp-csso');
 var concatCss = require('gulp-concat-css');
 var clean = require('gulp-clean');
+var styleInject = require("gulp-style-inject");
 
 // ------------------
 // Path
@@ -31,7 +32,7 @@ var paths = {
 //         .pipe(gulp.dest('content'));
 // });
 
-gulp.task('clean-css', function () {
+gulp.task('css.clean', function () {
     return gulp.src([
             'content/css/', 
             'websrc/less/*.css'
@@ -42,12 +43,9 @@ gulp.task('clean-css', function () {
         .pipe(clean());
 });
 
-gulp.task('less', gulp.series(['clean-css'], function () {
+gulp.task('less', gulp.series(['css.clean'], function () {
     return gulp.src(paths.less)
-        // .pipe(sourcemaps.init())
         .pipe(less())
-        // .pipe(changed(paths.dirs.build))
-        // .pipe(sourcemaps.write('.', { sourceRoot: '/' }))
         .pipe(concatCss('site.min.css'))
         .pipe(csso({
             restructure: false,
@@ -55,9 +53,13 @@ gulp.task('less', gulp.series(['clean-css'], function () {
             debug: false
         }))
         .pipe(gulp.dest(paths.dirs.style))
-        // .pipe(grep('**/*.css', { read: false, dot: true }))
-        // .pipe(browserSync.reload({ stream: true }));
 }));
+
+gulp.task('css.inject', function () {
+    return gulp.src("index.html")
+        .pipe(styleInject())
+        .pipe(gulp.dest("./build"));
+});
 
 gulp.task('watch:styles', function () {
     gulp.watch(paths.less, 'less');

@@ -31,11 +31,11 @@
     </style>
   </defs>
   <g id="estate-logo-only" transform="translate(98 267)">
-    <path id="Path_1" data-name="Path 1" class="cls-1" d="M145,216l21-11v17l-21,4Z"/>
-    <path id="Path_2" data-name="Path 2" class="cls-2" d="M166,205l30,16v7l-30-6Z"/>
-    <path id="Path_3" data-name="Path 3" class="cls-3" d="M135,231l31-6v17l-31-6Z"/>
-    <path id="Path_4" data-name="Path 4" class="cls-4" d="M166,225l20,4v9l-20,4Z"/>
-    <path id="Path_5" data-name="Path 5" class="cls-5" d="M145,241l21,4v17l-21-11Z"/>
-    <path id="Path_6" data-name="Path 6" class="cls-6" d="M166,245l30-5v6l-30,16Z"/>
+    <path fill="#f58220" id="Path_1" data-name="Path 1" class="cls-1" d="M145,216l21-11v17l-21,4Z"/>
+    <path fill="#ffcb31" id="Path_2" data-name="Path 2" class="cls-2" d="M166,205l30,16v7l-30-6Z"/>
+    <path fill="#03a9f4" id="Path_3" data-name="Path 3" class="cls-3" d="M135,231l31-6v17l-31-6Z"/>
+    <path fill="#0288d1" id="Path_4" data-name="Path 4" class="cls-4" d="M166,225l20,4v9l-20,4Z"/>
+    <path fill="#689f38" id="Path_5" data-name="Path 5" class="cls-5" d="M145,241l21,4v17l-21-11Z"/>
+    <path fill="#8bc34a" id="Path_6" data-name="Path 6" class="cls-6" d="M166,245l30-5v6l-30,16Z"/>
   </g>
 </svg>
