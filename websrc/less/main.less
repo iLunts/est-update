@@ -95,9 +95,23 @@
 
     & &__support{
         display: block;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
         width: 100%;
         text-align: center;
         margin-top: 20px;
+
+        &-velcom{
+            background: #222;
+            display: flex;
+            align-content: center;
+            width: 24px;
+            height: 24px;
+            padding: 4px;
+            margin-right: 10px;
+            border-radius: 3px;
+        }
         
         &-title{
             font-weight: 700;
@@ -112,6 +126,7 @@
             font-size: 20px;
             outline: none;
             box-shadow: none;
+            line-height: 1;
             transition: all .3s;
 
             &:hover{
@@ -137,16 +152,25 @@
 
     .main{
 
+        & &__city{
+            height: 120px;
+        }
+
         & &__block{
             width: 90%;
-            padding-top: 50px;
+
+            &-body{
+                padding-top: 10px;
+            }
 
             &-logo{
-                width: 30px;
-                margin-right: 5px;
+                margin: 0 0 10px 0;
             }
 
             &-title{
+                display: block;
+                padding: 30px;
+                text-align: center;
                 
                 .title{
                     font-size: 24px;
@@ -160,7 +184,12 @@
                     font-size: 12px;
                 }
             }
-            
+        }
+
+        & &__support{
+            &-title{
+                margin: 0 0 6px 0;
+            }
         }
     }
 
