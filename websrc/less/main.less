@@ -11,35 +11,62 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     
     & &__block{
         text-align: center;
-        background: #fff;
-        padding: 80px 0 10px 0;
         width: 40%;
-        box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.1);
-        border-radius: 6px;
+        
+        &-body{
+            background: #fff;
+            padding: 80px 0 10px 0;
+            box-shadow: 0 5px 40px 0 rgba(0, 0, 0, 0.1);
+            border-radius: 6px;
+        }
 
         &-logo{
             display: inline-block;
             vertical-align: middle;
             width: 50px;
-            margin-right: 10px;
+            margin-right: 20px;
         }
 
         &-title{
-            font-size: 36px;
-            line-height: 44px;
-            margin: 0;
-            color: #222;
-            font-weight: 400;
-        }
-        &-text{
-            font-size: 14px;
-            line-height: 18px;
-            margin: 0;
-            font-weight: 300;
-            color: #bbb;
+            display: flex;
+            justify-content: center;
+            text-align: left;
+            
+            .title{
+                display: block;
+                width: 100%;
+                font-size: 36px;
+                line-height: 44px;
+                margin: 0;
+                color: #222;
+                font-weight: 400;
+
+                b{
+                    font-weight: 700;
+                }
+            }
+            .subtitle{
+                display: block;
+                width: 100%;
+                font-size: 20px;
+                line-height: 24px;
+                margin: 0;
+                color: #222;
+                font-weight: 400;
+            }
+            .text{
+                display: block;
+                width: 100%;
+                font-size: 14px;
+                line-height: 18px;
+                margin: 20px 0 0 0;
+                font-weight: 300;
+                color: #bbb;
+            }
         }
     }
 
@@ -63,6 +90,35 @@
             animation-timing-function: linear;
             animation-iteration-count: infinite;
             animation-direction: alternate;
+        }
+    }
+
+    & &__support{
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+        
+        &-title{
+            font-weight: 700;
+            margin-right: 40px;
+            font-size: 16px;
+        }
+        &-phone{
+            font-weight: 700;
+            text-decoration: none;
+            border-bottom: 1px solid #0787d1;
+            color: #0787d1;
+            font-size: 20px;
+            outline: none;
+            box-shadow: none;
+            transition: all .3s;
+
+            &:hover{
+                color: lighten(#0787d1, 10%);
+                border-bottom-color: lighten(#0787d1, 30%);
+                
+            }
         }
     }
 }
@@ -91,11 +147,18 @@
             }
 
             &-title{
-                font-size: 24px;
-            }
+                
+                .title{
+                    font-size: 24px;
+                }
+                
+                .subtitle{
 
-            &-text{
-                font-size: 12px;
+                }
+
+                .text{
+                    font-size: 12px;
+                }
             }
             
         }
